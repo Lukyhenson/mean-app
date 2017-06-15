@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const util = require('gulp-util');
 
 require('./gulpTasks/app')
-require('./gulpTasks/dps')
+require('./gulpTasks/deps')
 require('./gulpTasks/server')
 
 gulp.task('default', () => {
