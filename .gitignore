@@ -1,2 +1,9 @@
+#FRONTEND
+frontend/node_modules
+public
+
+#BACKEND
 backend/node_modules
+
+#GENERAL
 *.log
