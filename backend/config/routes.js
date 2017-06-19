@@ -1,8 +1,8 @@
 const express = require('express')
 
-module.exports = (server) => {
+module.exports = function(server) {
 
-  //API Routes
+  // API Routes
   const router = express.Router()
   server.use('/api', router)
 
@@ -10,7 +10,6 @@ module.exports = (server) => {
   const billingCycleService = require('../api/billingCycle/billingCycleService')
   billingCycleService.register(router, '/billingCycles')
 
-  const billingCycleSummaryService = require('../api/billingCycleSummary/billingCycleSummaryService')
-  router.route('/billingSummary').get(billingCycleSummaryService.getSummary)
-
+  const billingSummaryService = require('../api/billingSummary/billingSummaryService')
+  router.route('/billingSummary').get(billingSummaryService.getSummary)
 }
